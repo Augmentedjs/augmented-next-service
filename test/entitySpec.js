@@ -1,6 +1,6 @@
 const Service = require("../src/service");
 
-describe("Given an Augmented Service Entity", function() {
+xdescribe("Given an Augmented Service Entity", function() {
     it("is defined", function() {
         expect(Service.Entity).toBeDefined();
     });

@@ -1,6 +1,6 @@
 const Service = require("../src/service");
 
-describe("Given an Augmented Service DataSourceFactory", function() {
+xdescribe("Given an Augmented Service DataSourceFactory", function() {
     it("a factory is defined", function() {
         expect(Service.DataSourceFactory).toBeDefined();
     });

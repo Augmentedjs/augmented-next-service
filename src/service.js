@@ -1,5 +1,9 @@
-const fs = require("fs");
-const Augmented = require("augmentedjs-next");
+import fs from "fs";
+import http from "http";
+import https from "https";
+import * as  Augmented from "augmentedjs-next";
+
+console.log("Augmented", Augmented);
 
 /**
  * service.js - The Service Core Component<br/>
@@ -21,7 +25,7 @@ const Augmented = require("augmentedjs-next");
  * @module Augmented.Service
  * @version 2.0.0-alpha.0
  * @license Apache-2.0
-*/
+ */
 
 /**
  * The base namespece for all of the Service module.
@@ -114,5 +118,7 @@ class Logger {
 };
 
 Service.Logger = Logger;
+
+export default Service;
 
 module.exports = Service;

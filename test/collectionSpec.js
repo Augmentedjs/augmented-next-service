@@ -1,6 +1,6 @@
 const Service = require("../src/service.js");
 
-describe("Given an Augmented Service Collections", function() {
+xdescribe("Given an Augmented Service Collections", function() {
 
     describe("Given an Augmented Service EntityCollection", function() {
         it("is defined", function() {
