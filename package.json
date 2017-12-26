@@ -1,0 +1,39 @@
+{
+  "name": "augmentedjs-next-service",
+  "version": "2.0.0-alpha.0",
+  "description": "The Augmented.js Next Framework.",
+  "main": "dist/service2.js",
+  "scripts": {
+    "build": "uglifyjs ./src/service.js -o ./dist/service2.js -c -v --screw-ie8",
+    "lint": "eslint ./src/service.js",
+    "setup": "npm install && npm run validate",
+    "validate": "npm-run-all lint test build",
+    "test": "jasmine-node ./test --verbose",
+    "docs": "jsdoc ./src -d ./jsdoc/ -R ./README.md -t ./node_modules/foodoc/template -c ./jsdoc.conf.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Augmentedjs/augmented-next-service.git"
+  },
+  "keywords": [
+    "augmentedjs",
+    "service"
+  ],
+  "author": "Bob Warren <jedi.master@augmentedjs.com> (http://www.augmentedjs.com)",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "foodoc": "0.0.8",
+    "jsdoc": "^3.5.5",
+    "uglify-es": "github:mishoo/UglifyJS2#harmony",
+    "uglify-js": "^3.3.2",
+    "uglify-js-es6": "^2.8.9"
+  },
+  "dependencies": {
+    "augmentedjs-next": "^2.0.0-alpha.3",
+    "jasmine-node": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Augmentedjs/augmented-next-service/issues"
+  },
+  "homepage": "http://www.augmentedjs.com"
+}

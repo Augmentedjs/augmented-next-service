@@ -1,0 +1,32 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "systemSummary": "Augmented.js 2 - Elegant Developement made simple.",
+    "systemColor": "#2196F3",
+    "systemLogo": "images/logo.png",
+    "logoFile": "images/logo.png",
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "dateFormat": "ddd MMM Do YYYY",
+    "outputSourceFiles": true,
+    "outputSourcePath": true,
+    "systemName": "Augmented.js",
+    "footer": "<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>",
+    "copyright": "",
+    "navType": "vertical",
+    "linenums": true,
+    "collapseSymbols": false,
+    "inverseNav": true,
+    "protocol": "html://",
+    "methodHeadingReturns": false,
+    "favicon": "images/favicon-32x32.png",
+    "showTableOfContents": true
+  },
+  "markdown": {
+    "parser": "gfm",
+    "hardwrap": true
+  }
+}
