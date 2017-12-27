@@ -11,9 +11,15 @@ module.exports = env => {
     context: __dirname,
     output: {
       path: resolve(__dirname, './dist'),
-      filename: 'service2.js',
+      filename: 'service-next.js',
       publicPath: '/dist/',
       pathinfo: ifNotProd(),
+      library: "augmented-next-service",
+      libraryTarget: "umd",
+      umdNamedDefine: true
+    },
+    node: {
+      fs: 'empty'
     },
     devtool: ifProd('source-map', 'eval'),
     devServer: {

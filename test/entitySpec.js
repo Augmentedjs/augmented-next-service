@@ -1,19 +1,20 @@
-const Service = require("../src/service");
+import Service from "../dist/service-next.js";
+import expect from "expect";
 
-xdescribe("Given an Augmented Service Entity", function() {
-    it("is defined", function() {
-        expect(Service.Entity).toBeDefined();
-    });
+describe("Given an Augmented Service Entity", () => {
+  it("is defined", () => {
+    expect(Service.Entity).toBeDefined();
+  });
 
-    var e;
-    beforeEach(function() {
-        e = new Service.Entity();
-    });
-    afterEach(function() {
-        e = null;
-    });
+  let e;
+  beforeEach(() => {
+    e = new Service.Entity();
+  });
+  afterEach(() => {
+    e = null;
+  });
 
-    it("can check if empty", function() {
-        expect(e.isEmpty()).toBeTruthy();
-    });
+  it("can check if empty", () => {
+    expect(e.isEmpty()).toBeTruthy();
+  });
 });

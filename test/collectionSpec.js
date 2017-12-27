@@ -1,49 +1,50 @@
-const Service = require("../src/service.js");
+import Service from "../dist/service-next.js";
+import expect from "expect";
 
-xdescribe("Given an Augmented Service Collections", function() {
+describe("Given an Augmented Service Collections", () => {
 
-    describe("Given an Augmented Service EntityCollection", function() {
-        it("is defined", function() {
+    describe("Given an Augmented Service EntityCollection", () => {
+        it("is defined", () => {
             expect(Service.EntityCollection).toBeDefined();
         });
 
-        var e;
-        beforeEach(function() {
+        let e;
+        beforeEach(() => {
             e = new Service.EntityCollection();
         });
-        afterEach(function() {
+        afterEach(() => {
             e = null;
         });
 
-        it("can check if empty", function() {
+        it("can check if empty", () => {
             expect(e.isEmpty()).toBeTruthy();
         });
 
-        it("supports setting a datasource", function() {
+        it("supports setting a datasource", () => {
             e.setDatasource({});
             expect(e.datasource).toBeDefined();
         });
     });
 
-    describe("Given an Augmented Service ResourceCollection", function() {
-        it("is defined", function() {
+    describe("Given an Augmented Service ResourceCollection", () => {
+        it("is defined", () => {
             expect(Service.ResourceCollection).toBeDefined();
         });
 
-        var e;
-        beforeEach(function() {
+        let e;
+        beforeEach(() => {
             e = new Service.ResourceCollection();
         });
-        afterEach(function() {
+        afterEach(() => {
             e = null;
         });
 
-        it("can check if empty", function() {
+        it("can check if empty", () => {
             expect(e.isEmpty()).toBeTruthy();
         });
 
-        it("supports setting a URL", function() {
-            e.setURL("localhost");
+        it("supports setting a URL", () => {
+            e.url = "localhost";
             expect(e.url).toEqual("localhost");
         });
     });

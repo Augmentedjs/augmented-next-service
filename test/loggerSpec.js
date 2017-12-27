@@ -1,4 +1,4 @@
-import Service from "../src/service.js";
+import Service from "../dist/service-next.js";
 import expect from "expect";
 
 describe("Given a service logger", () => {
