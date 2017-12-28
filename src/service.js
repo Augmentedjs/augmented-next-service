@@ -8,6 +8,8 @@ import SOLRDataSource from "./datasource/solrDataSource.js";
 import DataSourceFactory from "./datasource/datasourceFactory.js";
 import ResourceCollection from "./collection/resourceCollection.js";
 import EntityCollection from "./collection/entityCollection.js";
+import PaginatedResourceCollection from "./collection/paginatedResourceCollection.js";
+import PaginationFactory from "./collection/paginationFactory.js";
 import Entity from "./model/entity.js";
 import Resource from "./model/resource.js";
 
@@ -56,6 +58,8 @@ Service.SOLRDataSource = SOLRDataSource;
 Service.DataSourceFactory = DataSourceFactory;
 Service.ResourceCollection = ResourceCollection;
 Service.EntityCollection = EntityCollection;
+Service.PaginatedResourceCollection = PaginatedResourceCollection;
+Service.PaginationFactory = PaginationFactory;
 Service.Entity = Entity;
 Service.Resource = Resource;
 
