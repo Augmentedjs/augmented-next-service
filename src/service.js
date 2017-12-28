@@ -10,6 +10,7 @@ import ResourceCollection from "./collection/resourceCollection.js";
 import EntityCollection from "./collection/entityCollection.js";
 import PaginatedResourceCollection from "./collection/paginatedResourceCollection.js";
 import PaginationFactory from "./collection/paginationFactory.js";
+import PAGINATION_API from "./collection/paginationAPIType.js";
 import Entity from "./model/entity.js";
 import Resource from "./model/resource.js";
 
@@ -31,7 +32,7 @@ import Resource from "./model/resource.js";
  * @requires https
  * @requires fs
  * @module Augmented.Service
- * @version 2.0.0-alpha.0
+ * @version 2.0.0-alpha.1
  * @license Apache-2.0
  */
 
@@ -47,7 +48,7 @@ const Service = {};
  * @constant VERSION
  * @memberof Augmented.Service
  */
-Service.VERSION = "2.0.0-alpha.0";
+Service.VERSION = "2.0.0-alpha.1";
 
 Service.Logger = Logger;
 Service.DataSource = DataSource;
@@ -60,6 +61,7 @@ Service.ResourceCollection = ResourceCollection;
 Service.EntityCollection = EntityCollection;
 Service.PaginatedResourceCollection = PaginatedResourceCollection;
 Service.PaginationFactory = PaginationFactory;
+Service.PAGINATION_API = PAGINATION_API;
 Service.Entity = Entity;
 Service.Resource = Resource;
 

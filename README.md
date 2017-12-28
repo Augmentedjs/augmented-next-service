@@ -1,6 +1,6 @@
 # Augmented.js Next Service Module
 ## The Augmented.js Next Framework.
-### Version 2.0.0-alpha.0
+### Version 2.0.0-alpha.1
 ### "UNATCO"
 **aug·ment·ed**
 /ˌôɡˈmentəd /

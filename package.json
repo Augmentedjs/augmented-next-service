@@ -1,6 +1,6 @@
 {
   "name": "augmentedjs-next-service",
-  "version": "2.0.0-alpha.0",
+  "version": "2.0.0-alpha.1",
   "description": "The Augmented.js Next Framework.",
   "main": "dist/service2.js",
   "scripts": {
@@ -45,7 +45,7 @@
     "webpack-validator": "^2.2.7"
   },
   "dependencies": {
-    "augmentedjs-next": "^2.0.0-alpha.6"
+    "augmentedjs-next": "^2.0.0-alpha.8"
   },
   "bugs": {
     "url": "https://github.com/Augmentedjs/augmented-next-service/issues"
