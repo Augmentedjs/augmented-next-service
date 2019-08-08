@@ -4,7 +4,7 @@
   },
   "plugins": ["plugins/markdown"],
   "templates": {
-    "systemSummary": "Augmented.js 2 - Elegant Developement made simple.",
+    "systemSummary": "Augmented.js Next Service - Elegant Developement made simple.",
     "systemColor": "#2196F3",
     "systemLogo": "images/logo.png",
     "logoFile": "images/logo.png",
@@ -13,7 +13,7 @@
     "dateFormat": "ddd MMM Do YYYY",
     "outputSourceFiles": true,
     "outputSourcePath": true,
-    "systemName": "Augmented.js",
+    "systemName": "Augmented.js Next Service",
     "footer": "<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>",
     "copyright": "",
     "navType": "vertical",

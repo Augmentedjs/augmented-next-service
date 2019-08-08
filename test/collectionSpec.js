@@ -1,13 +1,6 @@
-import Service from "../dist/service-next.js";
-import expect from "expect";
-
 describe("Given an Augmented Service Collections", () => {
 
     describe("Given an Augmented Service EntityCollection", () => {
-        it("is defined", () => {
-            expect(Service.EntityCollection).toBeDefined();
-        });
-
         let e;
         beforeEach(() => {
             e = new Service.EntityCollection();
@@ -16,19 +9,23 @@ describe("Given an Augmented Service Collections", () => {
             e = null;
         });
 
+        it("is defined", () => {
+            expect(Service.EntityCollection).to.be.not.undefined;
+        });
+
         it("can check if empty", () => {
-            expect(e.isEmpty()).toBeTruthy();
+            expect(e.isEmpty()).to.be.true;
         });
 
         it("supports setting a datasource", () => {
             e.setDatasource({});
-            expect(e.datasource).toBeDefined();
+            expect(e.datasource).to.be.not.undefined;
         });
     });
 
     describe("Given an Augmented Service ResourceCollection", () => {
         it("is defined", () => {
-            expect(Service.ResourceCollection).toBeDefined();
+            expect(Service.ResourceCollection).to.be.not.undefined;
         });
 
         let e;
@@ -40,12 +37,12 @@ describe("Given an Augmented Service Collections", () => {
         });
 
         it("can check if empty", () => {
-            expect(e.isEmpty()).toBeTruthy();
+            expect(e.isEmpty()).to.be.true;
         });
 
         it("supports setting a URL", () => {
             e.url = "localhost";
-            expect(e.url).toEqual("localhost");
+            expect(e.url).to.equal("localhost");
         });
     });
 

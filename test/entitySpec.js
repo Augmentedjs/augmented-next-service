@@ -1,9 +1,6 @@
-import Service from "../dist/service-next.js";
-import expect from "expect";
-
 describe("Given an Augmented Service Entity", () => {
   it("is defined", () => {
-    expect(Service.Entity).toBeDefined();
+    expect(Service.Entity).to.be.not.undefined;
   });
 
   let e;
@@ -15,6 +12,6 @@ describe("Given an Augmented Service Entity", () => {
   });
 
   it("can check if empty", () => {
-    expect(e.isEmpty()).toBeTruthy();
+    expect(e.isEmpty()).to.be.true;
   });
 });

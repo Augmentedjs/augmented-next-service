@@ -1,18 +1,5 @@
-
-import Logger from "./logger.js";
-import DataSource from "./datasource/datasource.js";
-import DATASOURCE_STYLE from "./datasource/datasourceStyle.js";
-import MemoryDataSource from "./datasource/memoryDataSource.js";
-import MongoDataSource from "./datasource/mongoDataSource.js";
-import SOLRDataSource from "./datasource/solrDataSource.js";
-import DataSourceFactory from "./datasource/datasourceFactory.js";
-import ResourceCollection from "./collection/resourceCollection.js";
-import EntityCollection from "./collection/entityCollection.js";
-import PaginatedResourceCollection from "./collection/paginatedResourceCollection.js";
-import PaginationFactory from "./collection/paginationFactory.js";
-import PAGINATION_API from "./collection/paginationAPIType.js";
-import Entity from "./model/entity.js";
-import Resource from "./model/resource.js";
+import { DataSource, DATASOURCE_STYLE, MemoryDataSource, MongoDataSource, SOLRDataSource, DataSourceFactory } from "service-datasource";
+import { ResourceCollection, EntityCollection, PaginatedResourceCollection, PaginationFactory, PAGINATION_API, Entity, Resource } from "service-entity-models";
 
 /**
  * service.js - The Service Core Component<br/>
@@ -32,12 +19,12 @@ import Resource from "./model/resource.js";
  * @requires https
  * @requires fs
  * @module Augmented.Service
- * @version 2.0.0-alpha.1
+ * @version 2.0.1
  * @license Apache-2.0
  */
 
 /**
- * The base namespece for all of the Service module.
+ * The base namespace for all of the Service module.
  * @namespace Service
  * @memberof Augmented
  */
@@ -48,9 +35,8 @@ const Service = {};
  * @constant VERSION
  * @memberof Augmented.Service
  */
-Service.VERSION = "2.0.0-alpha.1";
+Service.VERSION = "2.0.1";
 
-Service.Logger = Logger;
 Service.DataSource = DataSource;
 Service.DATASOURCE_STYLE = DATASOURCE_STYLE;
 Service.MemoryDataSource = MemoryDataSource;

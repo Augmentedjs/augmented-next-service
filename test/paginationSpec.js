@@ -1,6 +1,3 @@
-import Service from "../src/service.js";
-import expect from "expect";
-
 describe('Given an Augmented Collection needing pagination', () => {
   describe('Given an Augmented PaginationFactory', () => {
     let c;
@@ -11,25 +8,25 @@ describe('Given an Augmented Collection needing pagination', () => {
       c = null;
     });
     it('has an augmented PaginationFactory', () => {
-      expect(Service.PaginationFactory).toBeDefined();
+      expect(Service.PaginationFactory).to.be.not.undefined;
     });
 
     it('can get a "github" API PaginatedCollection', () => {
       c = Service.PaginationFactory.getPaginatedCollection(Service.PaginatedResourceCollection, Service.PAGINATION_API.GITHUB);
-      expect(c instanceof Service.PaginatedResourceCollection).toBeTruthy();
-      expect(c.paginationConfiguration.currentPageParam).toEqual('page');
+      expect(c instanceof Service.PaginatedResourceCollection).to.be.true;
+      expect(c.paginationConfiguration.currentPageParam).to.equal('page');
     });
 
     it('can get a "solr" API PaginatedCollection', () => {
       c = Service.PaginationFactory.getPaginatedCollection(Service.PaginatedResourceCollection, Service.PAGINATION_API.SOLR);
-      expect(c instanceof Service.PaginatedResourceCollection).toBeTruthy();
-      expect(c.paginationConfiguration.currentPageParam).toEqual('start');
+      expect(c instanceof Service.PaginatedResourceCollection).to.be.true;
+      expect(c.paginationConfiguration.currentPageParam).to.equal('start');
     });
 
     it('can get a "database" API PaginatedCollection', () => {
       c = Service.PaginationFactory.getPaginatedCollection(Service.PaginatedResourceCollection, Service.PAGINATION_API.DATABASE);
-      expect(c instanceof Service.PaginatedResourceCollection).toBeTruthy();
-      expect(c.paginationConfiguration.currentPageParam).toEqual('offset');
+      expect(c instanceof Service.PaginatedResourceCollection).to.be.true;
+      expect(c.paginationConfiguration.currentPageParam).to.equal('offset');
     });
 
     it('will not get a "nothing" API PaginatedCollection', () => {
@@ -60,27 +57,27 @@ describe('Given an Augmented Collection needing pagination', () => {
     });
 
     it('has an augmented PaginatedCollection', () => {
-      expect(Service.PaginatedResourceCollection).toBeDefined();
+      expect(Service.PaginatedResourceCollection).to.be.not.undefined;
     });
 
     it('can create an augmented PaginatedCollection', () => {
-      expect(c instanceof Service.PaginatedResourceCollection).toBeTruthy();
+      expect(c instanceof Service.PaginatedResourceCollection).to.be.true;
     });
 
     it('has a configuration object', () => {
-      expect(c.paginationConfiguration).not.toEqual({});
+      expect(c.paginationConfiguration).not.to.equal({});
     });
 
     it('can set a configuration object', () => {
       c.setPaginationConfiguration(defConfig);
-      expect(c.paginationConfiguration).toEqual(defConfig);
+      expect(c.paginationConfiguration).to.equal(defConfig);
     });
 
     xit('can fetch', () => {
       c.url = "/tests/1";
       c.mock = true;
       var ret = c.fetch();
-      expect(ret).toBeDefined();
+      expect(ret).to.be.not.undefined;
     });
   });
 });

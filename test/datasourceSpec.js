@@ -1,20 +1,17 @@
-import Service from "../dist/service-next.js";
-import expect from "expect";
-
 describe("Given an Augmented Service DataSource", () => {
   it("is defined", () => {
-      expect(Service.DataSource).toBeDefined();
+      expect(Service.DataSource).to.be.not.undefined;
   });
 });
 
 describe("Given an Augmented Service DataSourceFactory", () => {
   it("a factory is defined", () => {
-    expect(Service.DataSourceFactory).toBeDefined();
+    expect(Service.DataSourceFactory).to.be.not.undefined;
   });
 
   describe("Given a DataSource instance", () => {
     it("is defined", () => {
-      expect(Service.DataSource).toBeDefined();
+      expect(Service.DataSource).to.be.not.undefined;
     });
   });
 
@@ -28,21 +25,21 @@ describe("Given an Augmented Service DataSourceFactory", () => {
     });
 
     it("can get a Memory DataSource instance", () => {
-      expect(ds).toBeDefined();
-      expect(ds instanceof Service.MemoryDataSource).toBeTruthy();
+      expect(ds).to.be.not.undefined;
+      expect(ds instanceof Service.MemoryDataSource).to.be.true;
     });
 
     xit("can insert into the db", () => {
       ds.insert("monkey");
-      expect(ds).toBeDefined();
+      expect(ds).to.be.not.undefined;
     });
     xit("can insert into the db", () => {
       ds.insert("monkey");
-      expect(ds).toBeDefined();
+      expect(ds).to.be.not.undefined;
     });
     xit("can query into the db", () => {
       ds.query("monkey");
-      expect(ds).toBeDefined();
+      expect(ds).to.be.not.undefined;
     });
   });
 
@@ -56,8 +53,8 @@ describe("Given an Augmented Service DataSourceFactory", () => {
     });
 
     it("can get a MongoDB DataSource instance", () => {
-      expect(ds).toBeDefined();
-      expect(ds instanceof Service.DataSource).toBeTruthy();
+      expect(ds).to.be.not.undefined;
+      expect(ds instanceof Service.DataSource).to.be.true;
     });
   });
 
@@ -70,8 +67,8 @@ describe("Given an Augmented Service DataSourceFactory", () => {
       ds = null;
     });
     it("can get a SOLR DataSource instance", () => {
-      expect(ds).toBeDefined();
-      expect(ds instanceof Service.DataSource).toBeTruthy();
+      expect(ds).to.be.not.undefined;
+      expect(ds instanceof Service.DataSource).to.be.true;
     });
   });
 });

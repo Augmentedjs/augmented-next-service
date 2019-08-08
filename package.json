@@ -1,16 +1,16 @@
 {
   "name": "augmentedjs-next-service",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.1",
   "description": "The Augmented.js Next Framework.",
-  "main": "dist/service2.js",
+  "main": "dist/augmented-next-service.js",
   "scripts": {
-    "build": "webpack --env.prod",
-    "build2": "uglifyjs ./src/service.js -o ./dist/service2.js -c -v --screw-ie8",
-    "lint": "eslint ./src/service.js",
-    "setup": "npm install && npm run validate",
-    "validate": "npm-run-all lint test build",
-    "test": "mocha --require babel-core/register",
-    "docs": "jsdoc ./src -d ./jsdoc/ -R ./README.md -t ./node_modules/foodoc/template -c ./jsdoc.conf.json"
+    "dev": "webpack --mode development --progress",
+    "build": "webpack --mode production --progress",
+    "test": "mocha --require @babel/register --require test/helper.js -c test/*Spec.js",
+    "docs": "rm -rf jsdoc && jsdoc ./src -r -d ./jsdoc/ -R ./README.md -t ./node_modules/foodoc/template -c ./jsdoc.conf.json -P ./package.json",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,29 +23,22 @@
   "author": "Bob Warren <jedi.master@augmentedjs.com> (http://www.augmentedjs.com)",
   "license": "Apache-2.0",
   "devDependencies": {
-    "babel-core": "^6.13.2",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-istanbul": "^1.0.3",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-stage-2": "^6.13.0",
-    "babel-register": "^6.11.6",
-    "chai": "^4.1.2",
-    "eslint": "^3.2.2",
-    "eslint-config-kentcdodds": "^9.0.2",
-    "expect": "^21.2.1",
-    "foodoc": "0.0.8",
-    "jsdoc": "^3.5.5",
-    "mocha": "^4.0.1",
-    "npm-run-all": "^4.1.2",
-    "uglify-es": "github:mishoo/UglifyJS2#harmony",
-    "webpack": "^2.1.0",
-    "webpack-config-utils": "^2.0.0",
-    "webpack-dev-middleware": "^1.12.2",
-    "webpack-dev-server": "^2.1.0",
-    "webpack-validator": "^2.2.7"
+    "@babel/core": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "documentation": "^11.0.1",
+    "foodoc": "0.0.9",
+    "jsdoc": "^3.6.3",
+    "mocha": "^6.2.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   },
   "dependencies": {
-    "augmentedjs-next": "^2.0.0-alpha.8"
+    "service-datasource": "^2.0.0",
+    "service-entity-models": "^2.0.0"
   },
   "bugs": {
     "url": "https://github.com/Augmentedjs/augmented-next-service/issues"
