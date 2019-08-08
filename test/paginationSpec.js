@@ -31,7 +31,7 @@ describe('Given an Augmented Collection needing pagination', () => {
 
     it('will not get a "nothing" API PaginatedCollection', () => {
       c = Service.PaginationFactory.getPaginatedCollection(Service.PaginatedResourceCollection, "nothing");
-      expect(c instanceof Service.PaginatedResourceCollection).toBeFalsy();
+      expect(c instanceof Service.PaginatedResourceCollection).to.be.false;
     });
   });
 

@@ -35,20 +35,17 @@ const Service = {};
  * @constant VERSION
  * @memberof Augmented.Service
  */
-Service.VERSION = "2.0.1";
-
-Service.DataSource = DataSource;
-Service.DATASOURCE_STYLE = DATASOURCE_STYLE;
-Service.MemoryDataSource = MemoryDataSource;
-Service.MongoDataSource = MongoDataSource;
-Service.SOLRDataSource = SOLRDataSource;
-Service.DataSourceFactory = DataSourceFactory;
-Service.ResourceCollection = ResourceCollection;
-Service.EntityCollection = EntityCollection;
-Service.PaginatedResourceCollection = PaginatedResourceCollection;
-Service.PaginationFactory = PaginationFactory;
-Service.PAGINATION_API = PAGINATION_API;
-Service.Entity = Entity;
-Service.Resource = Resource;
-
-export default Service;
+module.exports.VERSION = "2.0.1";
+module.exports.DataSource = DataSource;
+module.exports.DATASOURCE_STYLE = DATASOURCE_STYLE;
+module.exports.MemoryDataSource = MemoryDataSource;
+module.exports.MongoDataSource = MongoDataSource;
+module.exports.SOLRDataSource = SOLRDataSource;
+module.exports.DataSourceFactory = DataSourceFactory;
+module.exports.ResourceCollection = ResourceCollection;
+module.exports.EntityCollection = EntityCollection;
+module.exports.PaginatedResourceCollection = PaginatedResourceCollection;
+module.exports.PaginationFactory = PaginationFactory;
+module.exports.PAGINATION_API = PAGINATION_API;
+module.exports.Entity = Entity;
+module.exports.Resource = Resource;
