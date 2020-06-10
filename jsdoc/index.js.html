@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-		<title>service.js</title>
+		<title>index.js</title>
 		<link rel="icon" type="image/png" href="favicon.png"/>
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -42,7 +42,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js","systemSummary":"Augmented.js 2 - Elegant Developement made simple.","systemLogo":"img/logo.png","systemColor":"#2196F3","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"images/logo.png","navType":"vertical","protocol":"html://"};
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"ddd MMM Do YYYY","systemName":"Augmented.js Next Service","systemSummary":"Augmented.js Next Service - Elegant Developement made simple.","systemLogo":"img/logo.png","systemColor":"#2196F3","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"<a href='http://www.augmentedjs.com'>Augmented.js Homepage</a>","copyright":"","linenums":true,"collapseSymbols":false,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":true,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":false,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.png","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":false,"logoFile":"images/logo.png","navType":"vertical","protocol":"html://"};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -53,7 +53,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
-					Augmented.js
+					Augmented.js Next Service
 				</a>
 				<!-- displayed on small devices -->
 				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
@@ -64,24 +64,18 @@
 			</div>
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
-							<li class="dropdown">
-								<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-										<li><a href="Augmented.Service.Logger.html">Augmented.Service.Logger</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-										<li><a href="Augmented.module_Service.html">Augmented.Service</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
-								<ul class="dropdown-menu">
-										<li><a href="Augmented.Service.html">Augmented.Service</a></li>
-								</ul>
-							</li>
+								<li class="dropdown">
+									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="Augmented.module_Service.html">Augmented.Service</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="Augmented.Service.html">Augmented.Service</a></li>
+									</ul>
+								</li>
 				</ul>
 					<!-- start:lunr-search-navbar.hbs -->
 					<form class="navbar-form navbar-right" role="search">
@@ -100,7 +94,7 @@
 	<!-- end:navbar.hbs -->		<div class="page-header">
 			<div class="container">
 				<span class="kind">source</span>
-				<h1><span class="name">service.js</span></h1>
+				<h1><span class="name">index.js</span></h1>
 			</div>
 		</div>
 	<div class="container content">
@@ -108,21 +102,8 @@
 			<div class="col-md-12 main-content">
 		<section class="source-section">
 			<article></article>
-			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">
-import Logger from "./logger.js";
-import DataSource from "./datasource/datasource.js";
-import DATASOURCE_STYLE from "./datasource/datasourceStyle.js";
-import MemoryDataSource from "./datasource/memoryDataSource.js";
-import MongoDataSource from "./datasource/mongoDataSource.js";
-import SOLRDataSource from "./datasource/solrDataSource.js";
-import DataSourceFactory from "./datasource/datasourceFactory.js";
-import ResourceCollection from "./collection/resourceCollection.js";
-import EntityCollection from "./collection/entityCollection.js";
-import PaginatedResourceCollection from "./collection/paginatedResourceCollection.js";
-import PaginationFactory from "./collection/paginationFactory.js";
-import PAGINATION_API from "./collection/paginationAPIType.js";
-import Entity from "./model/entity.js";
-import Resource from "./model/resource.js";
+			<pre class="prettyprint source language-javascript line-numbers"><code class="language-javascript">import { DataSource, DATASOURCE_STYLE, MemoryDataSource, MongoDataSource, SOLRDataSource, DataSourceFactory } from "service-datasource";
+import { ResourceCollection, EntityCollection, PaginatedResourceCollection, PaginationFactory, PAGINATION_API, Entity, Resource } from "service-entity-models";
 
 /**
  * service.js - The Service Core Component&lt;br/>
@@ -142,12 +123,12 @@ import Resource from "./model/resource.js";
  * @requires https
  * @requires fs
  * @module Augmented.Service
- * @version 2.0.0-alpha.1
+ * @version 2.0.1
  * @license Apache-2.0
  */
 
 /**
- * The base namespece for all of the Service module.
+ * The base namespace for all of the Service module.
  * @namespace Service
  * @memberof Augmented
  */
@@ -158,32 +139,28 @@ const Service = {};
  * @constant VERSION
  * @memberof Augmented.Service
  */
-Service.VERSION = "2.0.0-alpha.1";
-
-Service.Logger = Logger;
-Service.DataSource = DataSource;
-Service.DATASOURCE_STYLE = DATASOURCE_STYLE;
-Service.MemoryDataSource = MemoryDataSource;
-Service.MongoDataSource = MongoDataSource;
-Service.SOLRDataSource = SOLRDataSource;
-Service.DataSourceFactory = DataSourceFactory;
-Service.ResourceCollection = ResourceCollection;
-Service.EntityCollection = EntityCollection;
-Service.PaginatedResourceCollection = PaginatedResourceCollection;
-Service.PaginationFactory = PaginationFactory;
-Service.PAGINATION_API = PAGINATION_API;
-Service.Entity = Entity;
-Service.Resource = Resource;
-
-export default Service;
+module.exports.VERSION = "2.0.1";
+module.exports.DataSource = DataSource;
+module.exports.DATASOURCE_STYLE = DATASOURCE_STYLE;
+module.exports.MemoryDataSource = MemoryDataSource;
+module.exports.MongoDataSource = MongoDataSource;
+module.exports.SOLRDataSource = SOLRDataSource;
+module.exports.DataSourceFactory = DataSourceFactory;
+module.exports.ResourceCollection = ResourceCollection;
+module.exports.EntityCollection = EntityCollection;
+module.exports.PaginatedResourceCollection = PaginatedResourceCollection;
+module.exports.PaginationFactory = PaginationFactory;
+module.exports.PAGINATION_API = PAGINATION_API;
+module.exports.Entity = Entity;
+module.exports.Resource = Resource;
 </code></pre>
 		</section>
 			</div>
 		</div>
 	</div>
 	<footer>
-				<div class="footer-option">&lt;a href&#x3D;&#x27;http://www.augmentedjs.com&#x27;&gt;Augmented.js Homepage&lt;/a&gt;</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Dec 27th 2017 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+				<div class="footer-option"><a href='http://www.augmentedjs.com'>Augmented.js Homepage</a></div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Wed Jun 10th 2020 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
