@@ -1,6 +1,6 @@
 # Augmented.js Next Service Module
 ## The Augmented.js Next Framework.
-### Version 2.0.0-alpha.1
+### Version 2.0.2
 ### "UNATCO"
 **aug·ment·ed**
 /ˌôɡˈmentəd /
@@ -9,6 +9,8 @@ adjective: augmented
 
     1. having been made greater in size or value.
 
+
+**Please note:** _This is a deprecated version_. This package is now maintained in seperate modules.
 
 ## Service
 
@@ -19,4 +21,3 @@ This extension adds:
 * REST Resource class and Collections
 * Abstract Datasource interface
   - MongoDB
-  - SOLR (work in progress)
